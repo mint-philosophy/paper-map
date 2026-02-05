@@ -225,7 +225,7 @@ def create_visualization(df, coords):
         darkmode=True,
         marker_size_array=marker_sizes,
         cluster_boundary_polygons=True,
-        polygon_alpha=0.3,
+        polygon_alpha=0.5,
         initial_zoom_fraction=0.95,
         custom_css=custom_css,
         custom_html=custom_html,

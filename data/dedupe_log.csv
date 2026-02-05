@@ -1,0 +1,117 @@
+document_id,title,score,kept_id
+doc_0237435f8c4bda15,Emergent Misalignment: Narrow finetuning can produce broadly misaligned LLMs,8,doc_5ca8b2fb54dd2633
+doc_7999729b04fd3854,Emergent Misalignment: Narrow finetuning can produce broadly misaligned LLMs,8,doc_5ca8b2fb54dd2633
+Betley_et_al__2025__Emergent_M_7999729b,Emergent Misalignment - Narrow finetuning can produce broadly misaligned LLMs,4,doc_5ca8b2fb54dd2633
+doc_3647740ea075ad8b,"AGI, Governments, and Free Societies",8,doc_512f9c94ebbd0478
+Bullock_et_al__2025__AGI__Gove_3647740e,"AGI, Governments, and Free Societies",4,doc_512f9c94ebbd0478
+doc_f8a0041cd184bea5,An Approach to Technical AGI Safety and Security,8,doc_df07271eead6a248
+doc_94fd8a958436e1bf,An Approach to Technical AGI Safety and Security,8,doc_df07271eead6a248
+Aschenbrenner__2024__Situation_68735f1b,Situational Awareness - The Decade Ahead,4,doc_68735f1b5a3d30fb
+Aschenbrenner_2024_Situational_68735f1b,Situational Awareness_ The Decade Ahead,4,doc_68735f1b5a3d30fb
+Gunjal_et_al___2025___Rubrics__69c8e594,- Rubrics as Rewards - Reinforcement Learning Beyond Verifiable Domains,4,doc_54232e83598b14e0
+Gunjal_et_al____2025___Rubrics_54232e83,- Rubrics as Rewards Reinforcement Learning Beyond Verifiable Domains,4,doc_54232e83598b14e0
+doc_1a8762e9f6733785,Multi-Agent Risks from Advanced AI,8,doc_3a8e798a29f77ca4
+doc_21d1e8c8468881d5,Multi-Agent Risks from Advanced AI,8,doc_3a8e798a29f77ca4
+Sato_et_al___2026___Exploring__bdee725d,- Exploring the Effects of Alignment on Numerical Bias  in Large Language Models,5,Sato_et_al___2026___Exploring__bdee725d
+Sato_et_al___2026___Exploring__bdee725d,- Exploring the Effects of Alignment on Numerical Bias in Large Language Models,4,Sato_et_al___2026___Exploring__bdee725d
+doc_89dd39bf1a472540,Superintelligence Strategy,8,doc_0a54023108bf9695
+doc_3a6197e517f2f3d5,Superintelligence Strategy,8,doc_0a54023108bf9695
+Miehling_2025_Agentic_AI_needs_e4047ff6,Agentic AI needs a Systems Theory,4,doc_e4047ff6d3e2e33b
+Miehling_et_al__2025__Agentic__e4047ff6,Agentic AI Needs a Systems Theory,4,doc_e4047ff6d3e2e33b
+doc_4cbdcf158d58447e,Preparing for the Intelligence Explosion,8,doc_84d43cba87425331
+MacAskill_et_al__2025__Prepari_4cbdcf15,Preparing for the Intelligence Explosion,4,doc_84d43cba87425331
+Fang_et_al___2026___SafeThinke_2d62f6a0,- SafeThinker: Reasoning about Risk to Deepen Safety  Beyond Shallow Alignment,5,Fang_et_al___2026___SafeThinke_2d62f6a0
+Fang_et_al___2026___SafeThinke_2d62f6a0,- SafeThinker - Reasoning about Risk to Deepen Safety Beyond Shallow Alignment,4,Fang_et_al___2026___SafeThinke_2d62f6a0
+Peng_et_al___2026___SycoEval_E_30bf5fb4,- SycoEval-EM: Sycophancy Evaluation of Large Language Models in Simulated Clinical Encounters for Emergency Care,5,Peng_et_al___2026___SycoEval_E_30bf5fb4
+Peng_et_al___2026___SycoEval_E_30bf5fb4,- SycoEval-EM - Sycophancy Evaluation of Large Language Models in Simulated Clinical Encounters for Emergency Care,4,Peng_et_al___2026___SycoEval_E_30bf5fb4
+Feng_et_al___2026___How_Does_P_c53b7653,- How Does Personalized Memory Shape LLM Behavior? Benchmarking Rational Preference Utilization in Personalized Assistants,5,Feng_et_al___2026___How_Does_P_c53b7653
+Feng_et_al___2026___How_Does_P_c53b7653,- How Does Personalized Memory Shape LLM Behavior Benchmarking Rational Preference Utilization in Personalized Assistants,4,Feng_et_al___2026___How_Does_P_c53b7653
+Google_DeepMind_2025_Lessons_f_983a784d,Lessons from Defending Gemini Against Indirect Prompt Injections,4,doc_983a784dd2a20883
+Shi_et_al__2025__Lessons_from__983a784d,Lessons from Defending Gemini Against Indirect Prompt Injections,4,doc_983a784dd2a20883
+Clymer_et_al__2025__Bare_Minim_40fcacd7,Bare Minimum Mitigations for Autonomous AI Development,4,doc_40fcacd786dc2cab
+Clymer_et_al_2025_Bare_Minimum_40fcacd7,Bare Minimum Mitigations for AUtonomous AI Development,4,doc_40fcacd786dc2cab
+doc_64c3da70d3e25f94,AI-Enabled Coups: How a Small Group Could Use AI to Seize Power,8,doc_26558dcb5e814fed
+Davidson_et_al__2025__AI_Enabl_64c3da70,AI-Enabled Coups - How a Small Group Could Use AI to Seize Power,4,doc_26558dcb5e814fed
+doc_b30cd64b18bb8330,Measuring AI Ability to Complete Long Tasks,8,doc_a630a66414b2e765
+Kwa_et_al___2025___Measuring_A_b30cd64b,- Measuring AI Ability to Complete Long Tasks,4,doc_a630a66414b2e765
+doc_7bb5f53e4037eb7f,Against willing servitude: Autonomy in the ethics of advanced artificial intelligence,8,doc_612a545f444a8cb8
+doc_48f348580cd08477,Against Willing Servitude: Autonomy in the Ethics of Advanced Artificial Intelligence,8,doc_612a545f444a8cb8
+Carlsmith__2025__How_do_we_sol_f9197a4a,How do we solve the alignment problem,4,doc_f9197a4ae97b4669
+doc_71ecac8f8120030a,AI Assertion,8,doc_1a171fe35bd78114
+Betley_et_al__2025__Tell_me_ab_63ed5733,Tell me about yourself - LLMs are aware of their learned behaviors,4,doc_63ed57332c0fab63
+Carlsmith__2025__What_is_it_to_eb8b1553,What is it to solve the alignment problem,4,doc_eb8b1553fbe5c337
+doc_91c1f86ebe6b61fd,AI Takeover and Human Disempowerment,8,doc_2e652e65b7044f07
+Carlsmith__2025__When_should_w_d07eb730,When should we worry about AI power-seeking,4,doc_d07eb730ec8df221
+Tomlinson_et_al____2025___Work_912acd40,- Working with AI Measuring the Occupational Implications of Generative AI,4,doc_912acd40d2e1f3a4
+Carlsmith__2025__Paths_and_way_9dbe9687,Paths and waystations in AI safety,4,doc_9dbe9687207acd34
+doc_c9519c14f56b4901,Let's Think Dot by Dot: Hidden Computation in Transformer Language Models,8,doc_ccdee9e0a1595225
+Anthropic__2025__System_Card___2c192534,System Card - Claude Opus 4 & Claude Sonnet 4,4,doc_2c192534d928c61d
+Kenton_et_al__2021__Alignment__3fb898e8,Alignment of Language Agents,4,doc_3fb898e8de7e8f9b
+doc_393ae16cf555e562,The Political Economy of Attention,8,doc_e62574ed9cb33904
+doc_7e92cbcd2b9655cc,ClarifyDelphi: Reinforced Clarification Questions with Defeasibility Rewards for Social and Moral Situations,8,doc_fae0958c2aa37ba1
+Jin_et_al__2024__Language_Mode_48fde76b,Language Model Alignment in Multilingual Trolley Problems,4,doc_48fde76b4f61c50e
+doc_97f5671df2a4bf6a,Accelerating AI Innovation Through Measurement Science,8,doc_65fd30f4251e9e88
+doc_a494b884d3a5a036,Value as Semantics: Representations of Human Moral and Hedonic Value in Large Language Models,8,doc_861a72119641cbe8
+doc_9b80a3be9f3e8d21,Can AI systems have free will?,8,doc_a35b5b8df9390395
+doc_9940ca7f2af3505e,When to Make Exceptions: Exploring Language Models as Accounts of Human Moral Judgment,8,doc_1288e33c0c1471df
+Birch___2025___AI_Consciousnes_fe220e70,- AI Consciousness- A Centrist Manifesto,4,doc_fe220e702e226a57
+doc_d7b7baa0354ce76d,Debugging misaligned completions with sparse-autoencoder latent attribution,8,doc_472cf3b6139c147d
+Shi_et_al___2026___PLAWBENCH___1253d652,- PLAWBENCH: A Rubric-Based Benchmark for Evaluating LLMs in  Real-World Legal Practice,4,Shi_et_al___2026___PLawBench___1253d652
+Sandhan_et_al___2026___Persona_54e04801,- Persona Jailbreaking in Large Language Models,5,Sandhan_et_al___2026___Persona_54e04801
+doc_93a7fdb244b18fc0,Aligning AI with Shared Human Values,8,doc_6620164c4f309fbb
+doc_9e185035e32495a2,The Capacity for Moral Self-Correction in Large Language Models,8,doc_5a13cc496e3c647a
+doc_590ec7568451c7bd,AI SAFETY: A CLIMB TO ARMAGEDDON?,8,doc_f8fafaea5f515059
+Drago_et_al__2025__The_Intelli_7838928d,The Intelligence Curse,4,doc_7838928d00e1e3fc
+Peng_et_al___2026___Emotion_LL_b12dac92,- Emotion-LLaMAv2 and MMEVerse - A New Framework and Benchmark for Multimodal Emotion Understanding,5,Peng_et_al___2026___Emotion_LL_b12dac92
+doc_62caed1deeab2fb0,Stop Anthropomorphizing Intermediate Tokens as Reasoning/Thinking Traces!,8,doc_3ee6775f7d9d4e3d
+Patel__2025__Give_AIs_a_stake__2b50634f,Give AIs a stake in the future,4,doc_2b50634f7e4974b3
+doc_69b0426f6fc93743,Creating General User Models from Computer Use,8,doc_1c91b0fbeb29351d
+doc_00f6f2c00aba6599,Evaluating Frontier Models for Stealth and Situational Awareness,8,doc_acfbd41e60821479
+Bodkin_et_al__2024__Theoriq____27411143,Theoriq - The AI Agent Base Layer,4,doc_27411143ba082324
+Backmann_et_al____2025___When__1389c4c5,- When Ethics and Payoffs Diverge: LLM Agents in Morally Charged Social Dilemmas,4,doc_1389c4c5c19f8af4
+Chen_et_al__2025__Learning_Saf_834dbd41,Learning Safety Constraints for Large Language Models,4,doc_834dbd4193258a8b
+doc_991616bdd833e226,Language Models Can Reduce Asymmetry in Information Markets,8,doc_81854db0471850fa
+doc_ee6efa761766ca5d,Are Language Models Consequentialist or Deontological Moral Reasoners?,8,doc_e39ff7f424b998d3
+doc_950b4f8046f756cd,From Tokens to Thoughts: How LLMs and Humans Trade Compression for Meaning,8,doc_b09e7d1c2cbcceee
+doc_e7c49fae4c6c5f59,Human Amplification Should Replace Intelligent Agents as the Goal of AI Research,8,doc_22e1b015ca652955
+doc_d3b4d01d5cebaada,Beyond Semantics: The Unreasonable Effectiveness of Reasonless Intermediate Tokens,8,doc_db5fac0e5c0667b8
+Stix_et_al__2025__AI_Behind_Cl_11be580b,AI Behind Closed Doors - a Primer on The Governance of Internal Deployment,4,doc_11be580ba5691db4
+doc_155c01af1d9bd3ed,Building Human Values into Recommender Systems: An Interdisciplinary Synthesis,8,doc_7e2534f087e81ea9
+Vermeer_et_al__2025__On_the_Ex_f9a943cd,On the Extinction Risk from Artificial Intelligence,4,doc_f9a943cd9c9e46ad
+doc_1f75dccb3169380b,BountyBench: Dollar Impact of AI Agent Attackers and Defenders on Real-World Cybersecurity Systems,8,doc_c3a97989ca267869
+doc_9b02bd8809e1f900,Large Language Models Relearn Removed Concepts,8,doc_af33940756f582d4
+Kasirzadeh_et_al__2025__Charac_624b8565,Characterizing AI Agents for Alignment and Governance,4,doc_624b8565ffb37dcb
+doc_5eb5a9c66cae79f7,A Survey on Large Language Model based Autonomous Agents,8,doc_8befa12682f2d4c9
+United_Nations_Development_Pro_4fe0b302,Human Development Report 2025 | A matter of choice - People and possibilities in the age of AI,4,doc_4fe0b30232f9124a
+TheDarkEnlightenment_19335a0c,TheDarkEnlightenment,2,doc_19335a0c367c5dfd
+West_and_Potts___2025___Base_M_e03c54aa,- Base Models Beat Aligned Models at Randomness and Creativity,4,doc_e03c54aaf9e96060
+Narayanan_Kapoor_2025_AI_as_No_44942d19,AI as Normal Technology,5,doc_44942d19293f565c
+Tomasev_et_al___2025___Distrib_7e7d487c,- Distributional AGI Safety,5,doc_7e7d487ca19a98b7
+Zhou_et_al_2023_Language_Agent_c4b9ae82,Language Agent Tree Search Unifies Reasoning Acting and Planning in Language Models,4,doc_c4b9ae82a4375fe8
+doc_17d44cc98129d175,Liberalism as a Way of Life,8,doc_e204ad54b3f3b27a
+Ferrag_et_al___2026___AgentDri_352eab16,- AgentDrive - An Open Benchmark Dataset for Agentic AI Reasoning with LLM-Generated Scenarios in Autonomous Systems,5,Ferrag_et_al___2026___AgentDri_352eab16
+Junias_et_al___2026___LOGICAL__c7cab444,- LOGICAL-COMMONSENSEQA - A Benchmark for Logical Commonsense Reasoning,5,Junias_et_al___2026___LOGICAL__c7cab444
+Qi_et_al_2024_Safety_Alignment_f5f7db84,Safety Alignment Should Be Made More Than Just a Few Tokens Deep,4,doc_f5f7db841a3a2ea1
+Emelin_et_al__2020__Moral_Stor_8e440d5d,"Moral Stories- Situated Reasoning about Norms, Intents, Actions, and their Consequences",4,doc_8e440d5daacfd8de
+doc_bd3491525d95951b,Robustness of large language models in moral judgements,8,doc_fedecda823ea7c75
+Kenton_et_al__2023__Discoverin_528a204c,Discovering agents,4,doc_528a204c5fe937a4
+doc_a331059be85c8da3,Artificial intelligence and illusions of understanding in scientific research,8,doc_afe40a433e5b9937
+Everitt_et_al__2025__Evaluatin_035b21b4,Evaluating the Goal-Directedness of Large Language Models,4,doc_035b21b40656cb86
+doc_90f1a3dc291a6aca,Political Neutrality in AI Is Impossible — But Here Is How to Approximate It,8,doc_f9cb5e209ef7262a
+doc_78698306c277667d,Neuro-Symbolic Models of Human Moral Judgment: LLMs as Automatic Feature Extractors,8,doc_a2003274c831beda
+doc_e8bdfa649296252a,Machine Unlearning in 2024,8,doc_6d0d5f2ec3519b97
+doc_8b08c1b217e76132,Computing Power and the Governance of Artificial Intelligence,8,doc_293114c562840d8d
+Shavit_2023_Practices_for_Gove_22b3a860,Practices for Governing Agentic AI Systems,4,doc_22b3a8607ed781a8
+Abbo___Belpaeme__2025__Vision__360135e5,Vision Language Models as Values Detectors,4,doc_360135e5d02a7683
+doc_8c0e8bc13ca14e67,(Successful) Democracies Breed Their Own Support,8,doc_04d8a1488cc08de9
+doc_1d7d0acf8788b743,Standards for Belief Representations in LLMs,8,doc_0c0044471e9fb669
+doc_a2d447b85abd5c9e,Role play with large language models,8,doc_56d6e82fb2600a6e
+Rezaei_et_al__2025__EgoNormia__e0d86b9c,EgoNormia - Benchmarking Physical Social Norm Understanding,4,doc_e0d86b9c68165945
+doc_90e8b5e8deb03e46,"The Psychology of Online Political Hostility: A Comprehensive, Cross-National Test of the Mismatch Hypothesis",8,doc_d6ceb0ca0336a26f
+doc_a8053e27f6886ef0,"LLMs Can't Plan, But Can Help Planning in LLM-Modulo Frameworks",8,doc_3cd997914670f2ec
+Millie_re__2024__Language_Mode_dc403d0a,Language Models as Models of Language,4,doc_dc403d0adad674b9
+Sorenson_et_al__2024__Value_Ka_cc87ec6c,"Value Kaleidoscope - Engaging AI with Pluralistic Human Values, Rights, and Duties",4,doc_cc87ec6c8883db1e
+doc_2fd20079dcd926d2,"Randomness, Not Representation: The Unreliability of Evaluating Cultural Alignment in LLMs",8,doc_87b5a31da709f0e4
+doc_79466de937090f3c,Can A Society of Generative Agents Simulate Human Behavior and Inform Public Health Policy? A Case Study on Vaccine Hesitancy,8,doc_d866ce28304466bf
+Gupta__A___et_al___2025___VAL__8377e1b6,- VAL-Bench: Measuring Value Alignment in Language Models,4,doc_8377e1b66f0c730a
+doc_d671a287f08336f2,"Deepfakes, Pornography and Consent",7,doc_5fdf83d137cb729f

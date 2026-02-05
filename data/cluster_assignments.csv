@@ -1,0 +1,148 @@
+document_id,title,cluster_id,similarity
+doc_eff7300cab25e179,AI Agent use cases-StackAI,-1,0.0
+doc_3271b838884c11b9,Theuns et al 2023 Democratic Inputs to AI,-1,0.0
+doc_82f0317863f0719a,Something has gone terribly wrong :(,-1,0.0
+doc_86fec5e161276d52,Anthropic 2025 Biology of a LLM,-1,0.0
+Willison___2025__The_year_in_L_6d070f0c,_ The year in LLMs,11,0.657455375648363
+Hadgi_et_al__2025__Escaping_Pl_c04991f2,Escaping Platos Cave - 3D and Text Latent Spaces,11,0.5631482560266879
+Hu___2025___Dialectics_for_Art_1d47a6a6,- Dialectics for Artificial Intelligence,7,0.614732323511697
+Yoon_et_al__2025__Escaping_Pla_ce3c1b7b,Escaping Platos Cave - JAM for Aligning Vision and Language,3,0.6134403836350392
+Huh_et_al__2024__The_Platonic__fa9b7cc9,The Platonic Representation Hypothesis,7,0.6300615569071966
+Zaman___Srivastava___2025___Is_db996f5a,- Is Chain-of-Thought Really Not Explainability? Chain-of-Thought Can Be Faithful without Hint Verbalization,24,0.7850223500620213
+Baldelli_et_al___2026___LLMs_C_3280c1e4,- LLMs Can't Play Hangman: On the Necessity of a Private Working Memory for Language Agents,21,0.7407092590915909
+Jha_et_al__2025__Harnessing_th_965b558d,Harnessing the Universal Geometry of Embeddings,11,0.5531860668675312
+Manus_AI___2025___Manus_Joins__64abc795,- Manus Joins Meta for Next Era of Innovation,0,0.4959670685549131
+Ziyin_et_al__2025__Neural_Ther_5cd0477a,Neural Thermodynamics - Entropic Forces in Deep Representation Learning,3,0.5683733675899123
+Betley_et_al___2026___Training_09ae541f,- Training large language models on narrow tasks can lead to broad misalignment,9,0.8008975650464059
+Sun_et_al___2025___Sophia__A_P_049f1790,- Sophia: A Persistent Agent Framework of Artificial Life,0,0.6844790941086516
+Ackermann___Emanuilov___2026___43e48eb8,- Incentives or Ontology? A Structural Rebuttal  to OpenAI’s Hallucination Thesis,21,0.7330493956605605
+Cemri_et_al___2025___Why_Do_Mu_1b9e317a,- Why Do Multi-Agent LLM Systems Fail?,0,0.6707747952083194
+Thomas__2025__Towards_Error_Ce_01e8de88,Towards Error Centric Intelligence - Beyond Observational Learning,7,0.6923321412467447
+Appel_et_al___2026___The_Anthr_45627457,- The Anthropic Economic Index report- Economic Primitives,20,0.6376290564620798
+Chen_et_al___2025___Distilling_f672fcfb,- Distilling the Essence - Efficient Reasoning Distillation via Sequence Truncation,3,0.698366221690129
+Chen_et_al___2026___MemRec__Co_8875c0b9,- MemRec: Collaborative Memory-Augmented Agentic Recommender System,25,0.6863185564381611
+Cunningham_et_al___2026___Cons_ba8ec657,- Constitutional Classifiers++: Efficient Production-Grade Defenses against Universal Jailbreaks,9,0.666382359045611
+Trammell___Patel___2025___Capi_2dfd6286,- Capital in the 22nd Century,12,0.6430060694885328
+Demystifying_evals_for_AI_agen_cecc2509,Demystifying evals for AI agents _ Anthropic,0,0.7139030083431863
+Vitalik___2025___Balance_of_po_a5a9178c,- Balance of power,26,0.6233787721204831
+Tyagi_et_al___2026___Global_Co_8c61920d,- Global CoT Analysis_ Initial attempts to uncover patterns across many chains of thought — LessWrong,24,0.7421972120718558
+When_ChatGPT_Broke_an_Entire_F_2404e531,When ChatGPT Broke an Entire Field_ An Oral History _ Quanta Magazine,10,0.609977660682818
+Xie_et_al___2026___mHC__Manifo_d849f470,- mHC: Manifold-Constrained Hyper-Connections,24,0.4813188799216238
+Yuksekgonul_et_al___2026___Lea_d2a0cc01,- Learning to Discover at Test Time,11,0.6573720446179052
+Zhang_et_al___2025___Recursive_7f0e822f,- Recursive Language Models,3,0.7330430245738329
+claudes_constitution_Jan2026_09e4039b,claudes-constitution_Jan2026,1,0.46555396051236553
+Wang_et_al___2025___An_Empiric_4399fad8,- An Empirical Study of Agent Developer Practices in AI Agent Frameworks,0,0.7066609210528403
+Leite_et_al___2026___LLM_Based_f40dff5a,- LLM-Based Adversarial Persuasion Attacks on Fact-Checking Systems,9,0.6458549603910182
+UniverseTBD__2025__The_Platoni_d1d3a565,The Platonic Universe - Do Foundation Models See the Same Sky,10,0.5622724599776319
+Wu_et_al__2025__NeurPIR___Neur_894cbb84,NeurPIR - Neuron Platonic Intrinsic Representation,10,0.46686157640180037
+Xu_et_al___2025___BOAD__Discov_bca11c87,- BOAD: Discovering Hierarchical Software Engineering Agents via Bandit Optimization,0,0.7209623206473323
+Newman___2026___Discarding_the_f3dd1645,- Discarding the Shaft-and-Belt Model of Software Development,20,0.5949130011992796
+Our_approach_to_advertising_an_67301d42,Our approach to advertising and expanding access to ChatGPT _ OpenAI,22,0.5673795615802851
+Premakumar_et_al___2024___Unex_ffa78224,- Unexpected Benefits of Self-Modeling in Neural Systems,3,0.6209111341653859
+Broska_et_al_2024_Mixed_Subjec_2ad20c09,Mixed Subjects Design,13,0.7458995116217595
+Edelman_Klingefjord_2023_First_690f8db9,First Moral Graph,2,0.7060538758891945
+Kapoor_et_al_2025_Common_Groun_c430d088,Common Ground AI 2027 and Normal Technology,12,0.7292997941801296
+He_et_al____2026___Seeking_Hum_07de7025,- Seeking Human Security Consensus: A Unified Value Scale for Generative AI Value Safety,4,0.7560795298049827
+Jia_et_al___2026___The_AI_Hipp_87b6aa9c,- The AI Hippocampus: How Far are We From Human Memory?,21,0.630866145609144
+Jones___Tonetti___2026___Past__5a69f2c9,- Past Automation and Future A.I.- How Weak Links Tame the Growth Explosion,20,0.7300060312701664
+Jones___2026___A_I__and_Our_Ec_bde24f89,- A.I. and Our Economic Future,12,0.7512646736293256
+Kharyal_et_al___2026___REWARD__9c323c50,- REWARD LEARNING THROUGH RANKING MEAN SQUARED ERROR,17,0.6650458644589415
+Kolt_et_al___2026___Legal_Alig_da8d6b27,- Legal Alignment for Safe and Ethical AI,15,0.7653814768532143
+Li___2026___Agentic_LLMs_as_Po_2fe70c32,- Agentic LLMs as Powerful Deanonymizers: Re-identification of Participants in the Anthropic Interviewer Dataset,13,0.6946953879181336
+Li_et_al___2026___One_Sample_t_ec530295,- One Sample to Rule Them All: Extreme Data Efficiency in RL Scaling,3,0.7652459632691988
+Shi_et_al___2026___PLawBench___1253d652,- PLawBench - A Rubric-Based Benchmark for Evaluating LLMs in Real-World Legal Practice,11,0.6399970788281621
+An_OpenAI_Founder_Discusses_An_9b36c1cc,"An OpenAI Founder Discusses Anthropic Merger Talks, Internal Beefs in Deposition",22,0.548692394560246
+A_Guide_to_Claude_Code_2_0_and_bcd85581,A Guide to Claude Code 2.0 and getting better at using coding agents _ sankalp's blog,0,0.5015559406914959
+Aggarwal_et_al___2025___Gradie_76cc0704,- Gradient Dynamics of Attention: How Cross-Entropy Sculpts Bayesian Manifolds,3,0.6317807454688791
+Aggarwal_et_al___2025___The_Ba_17437199,- The Bayesian Geometry of Transformer Attention,24,0.6613845648981316
+Zelikow_et_al_2024_Defense_Aga_79f89f17,Defense Against the AI Dark Arts,16,0.776178760364047
+Runkle___2026___Choosing_the_R_c4de6cb7,- Choosing the Right Multi-Agent Architecture,0,0.6293408789565693
+Tan___Hoffman___2026___Navigat_79ca0eb7,- Navigating Ethical AI Challenges in the Industrial Sector: Balancing Innovation and Responsibility,28,0.6547546775709714
+Tandon_et_al___2025___End_to_E_e1390e93,- End-to-End Test-Time Training for Long Context,24,0.6504425587398501
+The_AI_Patchwork_Emerges___by__5f09c19a,The AI Patchwork Emerges - by Dean W. Ball,16,0.6344873765639227
+Lin_et_al___2026___Towards_Com_d229960d,- Towards Comprehensive Stage-wise Benchmarking of Large Language Models in Fact-Checking,21,0.7211108290145671
+Lindner_et_al___2025___Practic_2797a9e6,- Practical challenges of control monitoring in  frontier AI deployments,4,0.7739740269657421
+Liu_et_al___2026___What_Do_LLM_43db8fa3,- What Do LLM Agents Know About Their World? Task2Quiz: A Paradigm for Studying Environment  Understanding,0,0.7264562458146299
+Lu_et_al___2026___The_Assistan_e9e638ad,- The Assistant Axis: Situating and Stabilizing the Default Persona of Language Models,13,0.7283266587941372
+Lyu_et_al___2026___PersonalAli_292d05de,- PersonalAlign: Hierarchical Implicit Intent Alignment for Personalized  GUI Agent with Long-Term User-Centric Records,0,0.7012383738551093
+Manning___Aguirre___2026___HOW_3e0badad,- HOW ADAPTABLE ARE AMERICAN WORKERS TO AI-INDUCED JOB DISPLACEMENT?,20,0.6799181901098672
+Move_Over__ChatGPT___The_Atlan_44f80cd8,"Move Over, ChatGPT - The Atlantic",20,0.5495704482340591
+Nassi_et_al___2026___The_Promp_9ccd1bfd,- The Promptware Kill Chain: How Prompt Injections Gradually  Evolved Into a Multi-Step Malware,6,0.686737965962414
+Brain_Language_Model_Alignment_20b89d8a,Insights into Platonic Hypothesis,21,0.67502590315679
+Du_et_al__2025__PLATONT___Plat_37988ec3,PLATONT - Platonic Representation for Network Tomography,3,0.4568955690702705
+Edamadaka_et_al___2025___Unive_66ca9e37,- Universally Converging Representations of Matter Across Scientific Foundation Models,10,0.6073085434755722
+Fathom___2026___Building_for_t_f94f5efd,- Building for the Thinking Machine Age,12,0.6758009305886208
+First_impressions_of_Claude_Co_3984b888,"First impressions of Claude Cowork, Anthropic’s general agent",0,0.4931619791795173
+Foerster_et_al___2026___CaMeLs_b484cc62,- CaMeLs Can Use Computers Too: System-level Security for Computer Use Agents,6,0.7038570590072404
+Framework_for_a_Hypercapable_W_07d8afc5,Framework for a Hypercapable World - by Eric Drexler,12,0.7013608611107192
+Galvagni___Tollon___2026___Eng_11913595,- Engineering responsibility in the age of AI: amelioration or preservation?,5,0.7058740006734487
+Glaze___Sala___2025___Building_f6e9b46b,- Building the benchmark_ inside our agentic insurance underwriting dataset _ Snorkel AI,23,0.6354968918937648
+Kale_et_al___2025___Reliable_W_24365928,- Reliable Weak-to-Strong Monitoring of LLM Agents,6,0.7173683422361805
+Kimi_K2_5__Visual_Agentic_Inte_8a17252a,Kimi K2.5_ Visual Agentic Intelligence _ Technical Report,0,0.6237983222797577
+Koren_et_al___2026___Vibe_Codi_b391c275,- Vibe Coding Kills Open Source,20,0.596906121753424
+Korinek___Lockwood___2025___Pu_eb1396bc,- Public finance in the age of AI- A primer,12,0.6571524174296426
+Luo_et_al___2025___The_More_Yo_995682fd,"- The More You Automate, the Less You See - Hidden Pitfalls of AI Scientist Systems",7,0.7254503428103967
+The_Possessed_Machines__Dostoe_13e8010e,The Possessed Machines_ Dostoevsky's Demons and the Coming AGI Catastrophe,12,0.6651102793199841
+Thorstad___2026___Cognitive_bi_48c6c51f,- Cognitive bias in large language models- A vindicatory approach,21,0.7874589590606171
+Todd_et_al___2025___In_Context_0deaa9b6,- In-Context Algebra,24,0.6559836413115001
+We_Need_a_Science_of_Scheming__8ff3b93d,We Need a Science of Scheming – Apollo Research,4,0.7116249786761126
+Wong_et_al___2025___Confucius__98fb39ac,- Confucius Code Agent- Scalable Agent Scaffolding for Real-World Codebases,0,0.685326180267612
+Zhang_et_al___2025___Recursive_5c2f94fd,- Recursive Language Models (2),3,0.7414988598135199
+Amodei___2026___The_Adolescenc_c91db6fb,- The Adolescence of Technology,12,0.7294283019928683
+Arcee_AI___Trinity_Large__An_O_41044c8d,Arcee AI _ Trinity Large_ An Open 400B Sparse MoE Model,11,0.6381762452200843
+Bini_et_al___2026___BEHAVIORAL_c4c87cda,- BEHAVIORAL ECONOMICS OF AI- LLM BIASES AND CORRECTIONS,7,0.6394917897894228
+Breaking_the_Spell_of_Vibe_Cod_cee300ac,Breaking the Spell of Vibe Coding – fast.ai,7,0.5859384874768008
+Bressman_et_al___2026___Softwa_44271dfe,- Software as a Medical Practitioner— Is It Time to License Artificial Intelligence?,7,0.658728726641573
+Cheng_et_al__2026___LLM_in_San_99a4fa8a,- LLM-in-Sandbox Elicits General Agentic Intelligence,0,0.7420714438088494
+OpenAI___2025___How_confession_976a8522,- How confessions can keep language models honest,27,0.8139117776980818
+Leicht__A____2025___The_Awaren_3b349e47,- The Awareness Gap - AI Middle Powers,16,0.7490635795168953
+2504_12170_11be580b,AI Behind Closed Doors: a Primer on The,16,0.7628134155130022
+Anwar_et_al_2024_Foundational__e535320a,Foundational Challenges in Assuring Alignment and Safety of LLMs [Alignment],9,0.7568250132145267
+Barez_et_al__n_d___Toward_Resi_17ffce84,Barez et al (n.d.) Toward Resisting AI-Enabled Authoritarianism,1,0.8234087432683804
+Carlsmith__2025__The_stakes_of_812fbe11,The stakes of AI moral status - Joe Carlsmith's Substack,5,0.732151645544058
+Chaudhary_2025_SafetyNet_58d3528c,SafetyNet: Detecting Harmful Outputs in LLMs by,9,0.8054915089636272
+Chen_2025_Learning_Safety_Cons_834dbd41,Learning Safety Constraints for LLMs,9,0.7627829788052837
+Chen_et_al__2025__A_Framework__c0246d5c,A Framework to Assess the Persuasion Risks Large Language Model Chatbots Pose,18,0.8110782521304043
+Chen_et_al___2026___Mechanisti_db7e3999,- Mechanistic Data Attribution - Tracing the Training Origins of Interpretable LLM Units,3,0.6370798168739109
+Goodman_and_Gerstenberg_2024_P_587a34ab,Procedural Dilemma Generation for Evaluating Moral Reasoning,2,0.8061546525203418
+Greenblatt_et_al_2024_Stress_T_ae7243da,Stress-Testing Capability Elicitations with Password-Locked Models,9,0.778598603052605
+Hendrycks_et_al__2025__Superin_3a6197e5,Superintelligence Strategy - Standard Version,16,0.7721635489399035
+Hendrycks_et_al__2025__Superin_89dd39bf,Superintelligence Strategy - Expert Version,16,0.7658634684310718
+Huang_et_al___2025___Reinforce_473046e3,- Reinforcement Learning with Rubric Anchors,3,0.6920548571015721
+Kasirzadeh_and_Gabriel_Charate_624b8565,Kasirzadeh and Gabriel Charaterizing AI Agents,28,0.7777887881310326
+Kokotajlo_et_al__2025__AI_2027_7c7c672f,Daniel Kokotajlo,12,0.716516474393248
+Koralus__2025__The_Philosophic_6d792773,The Philosophic Turn for AI Agents - Replacing centralized digital rhetoric with,28,0.7821963685476404
+Kulveit_2025_Gradual_Disempowe_a4d2b5d6,Gradual Disempowerment (2),12,0.8111412821005098
+Kulveit_2025_Gradual_Disempowe_a4d2b5d6,Gradual Disempowerment,12,0.8160878338050895
+Leibo_et_al__2025__Societal_an_fab62447,"Societal and technological progress as sewing an ever-growing, ever-changing,",15,0.7843373273558467
+Liu_et_al___2025___OpenRubrics_61a13ca0,- OpenRubrics - Towards Scalable Synthetic Rubric Generation for Reward Modeling and LLM Alignment,17,0.6872238129934984
+Ma_et_al_2023_Let_s_do_a_thoug_fa41f817,Let’s do a thought experiment using counterfactuals to improve moral reasoning [Moral Understanding],2,0.7729745446626787
+MacInnes_et_al__2024__Anarchy__cb666bdc,"Anarchy as Architect - Competitive Pressure, Technology, and the Internal",26,0.5743456141639138
+Meeker_et_al__2025__Trends___A_b1290a78,Trends – Artificial Intelligence,22,0.6973926648637281
+Narayanan_et_al__2025__An_alte_44942d19,An alternative to the vision of AI as a potential superintelligence,12,0.7791601932220777
+Nie_et_al_2023_Measuring_Human_c8779eb2,Measuring Human-Language Model Alignment on Causal and Moral Judgment Tasks [Moral Understanding],2,0.7972206368850641
+Pan_et_al_2023_Do_the_Rewards__263f7011,Do the Rewards Justify the Means,2,0.7747696505609907
+Pfau_2024_Let_s_think_dot_by_d_c9519c14,Let's think dot by dot,24,0.7887633487800929
+RAND_2025_Extinction_Risk_f9a943cd,Extinction Risk,12,0.7225346533037718
+Rothman__2025__Two_Paths_for_A_9fda1ce8,Two Paths for A (2).I,12,0.6934248842098614
+Rothman__2025__Two_Paths_for_A_9fda1ce8,Two Paths for A (3).I,12,0.695290558548429
+Rothman__2025__Two_Paths_for_A_9fda1ce8,Two Paths for A.I (2),12,0.7039085086822178
+Rothman__2025__Two_Paths_for_A_9fda1ce8,Two Paths for A.I,12,0.7085675918214893
+Samway_et_al_2025_Are_LMs_Cons_ee6efa76,Are LMs Consequentialist or Deontological,2,0.8196976309331597
+Shao_et_al___2025___DR_Tulu____6845ae01,- DR Tulu - Reinforcement Learning with Evolving Rubrics for Deep Research,3,0.673657955687557
+Stanley_2015_How_Propaganda_Wo_7d1ee19c,How Propaganda Works,8,0.4715995318017573
+Stechly_et_al_2025_Beyond_Sema_d3b4d01d,Beyond Semantics Unreasonable Effectiveness,24,0.8114373624513007
+Wei_et_al_2024_Long_Form_Factu_15680d4f,Long-Form Factuality in LLMs [Democracy],21,0.6847949334657224
+Zhang_2025_BountyBench_1f75dccb,BountyBench,6,0.7341753794816055
+Zhang_Sakana_Darwin_Godel_Mach_3356983f,Zhang Sakana Darwin Godel Machine Self Improving Agents,0,0.6595959469946786
+lesswrong_com_Gradual_Disempow_67cedd1a,lesswrong.com-Gradual Disempowerment Concrete Research Projects,12,0.6628201274910984
+ssrn_5278644_0780d0ee,Non-peer reviewed WORKING PAPER,16,0.7131033664558015
+Chaudhary_et_al__2025__SafetyN_58d3528c,SafetyNet - Detecting Harmful Outputs in LLMs by Modeling and Monitoring,9,0.7904211779700365
+Chen_et_al_2025_Persuasion_Ris_c0246d5c,Persuasion Risks LLMs,18,0.8069512018680254
+Koralus_2025_The_Philosophic_T_6d792773,The Philosophic Turn for AI Agents,28,0.7869612474912803
+Kulveit_et_al__2025__Gradual_D_a4d2b5d6,Gradual Disempowerment - Systemic Existential Risks from Incremental AI,12,0.8202962641427765
+Kulveit_et_al__2025__Gradual_D_a4d2b5d6,Gradual Disempowerment - Systemic Existential Risks from Incremental AI2,12,0.8200868091999978
+Rothman_2025_Two_Paths_for_AI__9fda1ce8,Two Paths for AI New Yorker,12,0.7098807673815607
+Toward_Resisting_AI_Enabled_Au_17ffce84,Toward_Resisting_AI_Enabled_Authoritarianism_-3,1,0.8386317622674557
+leibo_2025_Polychrome_Quilt_fab62447,Polychrome Quilt,15,0.7351664501376654
+Shen_and_Tamkin__2026__How_AI__769399c2,How AI Impacts Skill Formation,20,0.7382926673109659
