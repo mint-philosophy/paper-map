@@ -93,12 +93,15 @@ def prepare_hover_text(df):
 
 def prepare_extra_data(df):
     """Prepare extra data for tooltip template."""
+    # Process authors
+    authors_str = df['authors'].apply(
+        lambda x: ', '.join(x[:3]) + (' et al.' if len(x) > 3 else '')
+        if isinstance(x, list) else str(x)[:100]
+    )
+
     extra = pd.DataFrame({
         'title': df['title'].fillna('Unknown'),
-        'authors': df['authors'].apply(
-            lambda x: ', '.join(x[:3]) + (' et al.' if len(x) > 3 else '')
-            if isinstance(x, list) else str(x)[:100]
-        ),
+        'authors': authors_str,
         'year': df['year'].fillna('N/A').astype(str),
         'citations': df['citation_count'].fillna(0).astype(int),
         'abstract': df['abstract'].fillna('').apply(
@@ -108,24 +111,17 @@ def prepare_extra_data(df):
             lambda x: str(x)[:400] + '...' if len(str(x)) > 400 else str(x)
         ),
         'category': df['macro_category'].fillna('Uncategorized'),
-        'url': df['drive_url'].fillna('')
+        'url': df['drive_url'].fillna(''),
+        # Combined field for search
+        'searchable': df['title'].fillna('') + ' ' + authors_str
     })
 
     return extra
 
 
-def compute_marker_sizes(df, min_size=3, max_size=20):
-    """Compute marker sizes based on citation count."""
-    cites = df['citation_count'].fillna(0).values
-    # Log scale with offset
-    log_cites = np.log1p(cites)
-    # Normalize to [min_size, max_size]
-    if log_cites.max() > log_cites.min():
-        normalized = (log_cites - log_cites.min()) / (log_cites.max() - log_cites.min())
-    else:
-        normalized = np.zeros_like(log_cites)
-    sizes = min_size + normalized * (max_size - min_size)
-    return sizes
+def compute_marker_sizes(df, size=5):
+    """Return uniform marker sizes."""
+    return np.full(len(df), size)
 
 
 def create_visualization(df, coords):
@@ -214,7 +210,7 @@ def create_visualization(df, coords):
     </div>
     """
 
-    # Custom JS for year filtering (note: datamapplot's filtering API)
+    # Custom JS for year filtering and fixing click handler
     custom_js = """
     const slider = document.getElementById('year-slider');
     const display = document.getElementById('year-display');
@@ -224,9 +220,21 @@ def create_visualization(df, coords):
     slider.addEventListener('input', function() {
         const maxYear = parseInt(this.value);
         display.textContent = minYear + ' - ' + maxYear;
-        // Note: Full filtering requires datamapplot selection API
-        // This is a placeholder for the UI
     });
+
+    // Fix click handler - override after datamap initializes
+    setTimeout(() => {
+        if (typeof datamap !== 'undefined' && datamap.deckgl) {
+            datamap.deckgl.setProps({
+                onClick: ({index, picked}) => {
+                    if (picked && datamap.metaData && datamap.metaData.url) {
+                        const url = datamap.metaData.url[index];
+                        if (url) window.open(url, '_blank');
+                    }
+                }
+            });
+        }
+    }, 1000);
     """
 
     print("Creating interactive plot...")
@@ -239,9 +247,10 @@ def create_visualization(df, coords):
         hover_text=hover_text,
         extra_point_data=extra_data,
         hover_text_html_template=hover_template,
-        on_click="if('{url}') window.open('{url}', '_blank')",
+        # Click handler set via custom_js due to datamapplot template bug
+        on_click=None,
         enable_search=True,
-        search_field='title',
+        search_field='searchable',
         title="MINT Lab Research Corpus",
         sub_title=f"{len(df):,} papers across {df['macro_category'].nunique()} research areas",
         font_family="Inter",
