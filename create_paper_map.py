@@ -21,13 +21,18 @@ def load_data():
     coords = np.load(DATA_PATH / "umap_coords.npy")
     doc_ids = np.load(DATA_PATH / "document_ids.npy", allow_pickle=True)
 
-    # Load citations if available
-    citations_path = DATA_PATH / "citations.json"
-    if citations_path.exists():
-        with open(citations_path) as f:
+    # Load citations - prefer OpenAlex
+    citations = {}
+    openalex_path = DATA_PATH / "citations_openalex.json"
+    fallback_path = DATA_PATH / "citations.json"
+
+    if openalex_path.exists():
+        with open(openalex_path) as f:
             citations = json.load(f)
-    else:
-        citations = {}
+        print(f"Loaded OpenAlex citations: {sum(1 for v in citations.values() if v.get('found'))} found")
+    elif fallback_path.exists():
+        with open(fallback_path) as f:
+            citations = json.load(f)
 
     # Create coords dataframe with document IDs
     coords_df = pd.DataFrame({
