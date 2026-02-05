@@ -1,0 +1,8 @@
+datamapplot>=0.4.0
+umap-learn
+lancedb
+pandas
+numpy
+requests
+tqdm
+pyarrow

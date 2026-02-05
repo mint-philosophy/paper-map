@@ -1,0 +1,33 @@
+{
+  "total_papers": 1352,
+  "macro_categories": {
+    "Uncategorized": 196,
+    "Other": 136,
+    "LLM Agents & Autonomy": 127,
+    "LLM Capabilities & Reasoning": 95,
+    "Moral Reasoning & Ethics": 91,
+    "AI Safety & Alignment": 81,
+    "AI Moral Status & Consciousness": 64,
+    "Generative AI Foundations": 62,
+    "Social Media & Misinformation": 57,
+    "LLM Psychology & Behavior": 52,
+    "AI Governance & Policy": 48,
+    "Economic & Labor Impact": 45,
+    "Democracy & Politics": 44,
+    "Human-AI Interaction": 39,
+    "Deception & Honesty": 34,
+    "Interpretability & Mechanistic": 33,
+    "RLHF & Preference Learning": 30,
+    "Scientific & Research Applications": 28,
+    "Emerging Tech & Regulation": 25,
+    "Security & Attacks": 22,
+    "Bias & Fairness": 15,
+    "Evaluation & Benchmarks": 15,
+    "Values & Human Values": 13
+  },
+  "year_range": [
+    0,
+    2026
+  ],
+  "total_citations": 1493
+}
