@@ -121,34 +121,8 @@ def create_visualization(df, coords):
     </div>
     """
 
-    # Custom CSS for year filter and legend
+    # Custom CSS
     custom_css = """
-    #year-filter {
-        position: absolute;
-        bottom: 20px;
-        left: 20px;
-        background: rgba(30,30,30,0.9);
-        padding: 12px 16px;
-        border-radius: 8px;
-        font-family: system-ui, sans-serif;
-        z-index: 1000;
-    }
-    #year-filter label {
-        color: #aaa;
-        font-size: 12px;
-        display: block;
-        margin-bottom: 6px;
-    }
-    #year-slider {
-        width: 200px;
-        accent-color: #6b9;
-    }
-    #year-display {
-        color: #fff;
-        font-size: 14px;
-        font-weight: 600;
-        margin-top: 4px;
-    }
     #stats-display {
         position: absolute;
         bottom: 20px;
@@ -182,16 +156,8 @@ def create_visualization(df, coords):
     }
     """
 
-    # Custom HTML for year filter
-    min_year = int(df['year'].min())
-    max_year = int(df['year'].max())
-
+    # Custom HTML
     custom_html = f"""
-    <div id="year-filter">
-        <label>Filter by Year</label>
-        <input type="range" id="year-slider" min="{min_year}" max="{max_year}" value="{max_year}">
-        <div id="year-display">{min_year} - {max_year}</div>
-    </div>
     <div id="stats-display">
         <div id="paper-count">{len(df):,} papers</div>
     </div>
@@ -200,18 +166,8 @@ def create_visualization(df, coords):
     </a>
     """
 
-    # Custom JS for year filtering and fixing click handler
+    # Custom JS for fixing click handler
     custom_js = """
-    const slider = document.getElementById('year-slider');
-    const display = document.getElementById('year-display');
-    const countDisplay = document.getElementById('paper-count');
-    const minYear = parseInt(slider.min);
-
-    slider.addEventListener('input', function() {
-        const maxYear = parseInt(this.value);
-        display.textContent = minYear + ' - ' + maxYear;
-    });
-
     // Fix click handler - override after datamap initializes
     setTimeout(() => {
         if (typeof datamap !== 'undefined' && datamap.deckgl) {
