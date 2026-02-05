@@ -161,6 +161,25 @@ def create_visualization(df, coords):
         font-size: 12px;
         z-index: 1000;
     }
+    #credits-btn {
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+        background: rgba(30,30,30,0.9);
+        padding: 8px 12px;
+        border-radius: 6px;
+        font-family: system-ui, sans-serif;
+        color: #888;
+        font-size: 11px;
+        z-index: 1000;
+        cursor: pointer;
+        text-decoration: none;
+        transition: color 0.2s, background 0.2s;
+    }
+    #credits-btn:hover {
+        color: #fff;
+        background: rgba(50,50,50,0.95);
+    }
     """
 
     # Custom HTML for year filter
@@ -176,6 +195,9 @@ def create_visualization(df, coords):
     <div id="stats-display">
         <div id="paper-count">{len(df):,} papers</div>
     </div>
+    <a id="credits-btn" href="https://github.com/TutteInstitute/datamapplot" target="_blank" title="Built with datamapplot">
+        Built with datamapplot
+    </a>
     """
 
     # Custom JS for year filtering and fixing click handler
