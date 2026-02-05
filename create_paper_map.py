@@ -21,19 +21,6 @@ def load_data():
     coords = np.load(DATA_PATH / "umap_coords.npy")
     doc_ids = np.load(DATA_PATH / "document_ids.npy", allow_pickle=True)
 
-    # Load citations - prefer OpenAlex
-    citations = {}
-    openalex_path = DATA_PATH / "citations_openalex.json"
-    fallback_path = DATA_PATH / "citations.json"
-
-    if openalex_path.exists():
-        with open(openalex_path) as f:
-            citations = json.load(f)
-        print(f"Loaded OpenAlex citations: {sum(1 for v in citations.values() if v.get('found'))} found")
-    elif fallback_path.exists():
-        with open(fallback_path) as f:
-            citations = json.load(f)
-
     # Create coords dataframe with document IDs
     coords_df = pd.DataFrame({
         'document_id': doc_ids,
@@ -43,11 +30,6 @@ def load_data():
 
     # Merge to align data
     df = coords_df.merge(df, on='document_id', how='left')
-
-    # Add citation counts
-    df['citation_count'] = df['document_id'].apply(
-        lambda x: citations.get(x, {}).get('citation_count', 0)
-    )
 
     return df, coords
 
@@ -74,18 +56,6 @@ def prepare_hover_text(df):
 
     for _, row in df.iterrows():
         title = row.get('title', 'Unknown')
-        authors = row.get('authors', 'Unknown')
-        if isinstance(authors, list):
-            authors = ', '.join(authors[:3])
-            if len(row.get('authors', [])) > 3:
-                authors += ' et al.'
-        year = row.get('year', 'N/A')
-        cites = row.get('citation_count', 0)
-
-        abstract = row.get('abstract', '')
-        if abstract and len(str(abstract)) > 200:
-            abstract = str(abstract)[:200] + '...'
-
         hover_texts.append(f"{title}")
 
     return hover_texts
@@ -103,7 +73,6 @@ def prepare_extra_data(df):
         'title': df['title'].fillna('Unknown'),
         'authors': authors_str,
         'year': df['year'].fillna('N/A').astype(str),
-        'citations': df['citation_count'].fillna(0).astype(int),
         'abstract': df['abstract'].fillna('').apply(
             lambda x: str(x)[:300] + '...' if len(str(x)) > 300 else str(x)
         ),
@@ -144,7 +113,6 @@ def create_visualization(df, coords):
         </div>
         <div style="display:flex; gap:12px; font-size:11px; color:#888; margin-bottom:8px;">
             <span>{year}</span>
-            <span>{citations} citations</span>
             <span style="color:#6b9; font-weight:500;">{category}</span>
         </div>
         <div style="font-size:11px; color:#ccc; line-height:1.4;">
@@ -278,8 +246,6 @@ def main():
     print("\nData summary:")
     print(f"  Macro categories: {df['macro_category'].nunique()}")
     print(f"  Year range: {df['year'].min()}-{df['year'].max()}")
-    print(f"  Papers with citations: {(df['citation_count'] > 0).sum()}")
-    print(f"  Total citations: {df['citation_count'].sum():,}")
 
     plot = create_visualization(df, coords)
 
@@ -293,8 +259,7 @@ def main():
     summary = {
         "total_papers": len(df),
         "macro_categories": df['macro_category'].value_counts().to_dict(),
-        "year_range": [int(df['year'].min()), int(df['year'].max())],
-        "total_citations": int(df['citation_count'].sum())
+        "year_range": [int(df['year'].min()), int(df['year'].max())]
     }
     with open(OUTPUT_PATH / "summary.json", 'w') as f:
         json.dump(summary, f, indent=2)
