@@ -321,8 +321,43 @@ b"@font-face {\n  font-family: 'Inter';\n  font-style: normal;\n  font-weight: 3
     }
     
     </style>
+  <script>
+    // Embed mode: hide chrome when loaded in an iframe via ?embed=true
+    (function() {
+      var params = new URLSearchParams(window.location.search);
+      if (params.get('embed') === 'true') {
+        document.documentElement.classList.add('embed-mode');
+      }
+    })();
+  </script>
+  <style>
+    .embed-mode #title-container,
+    .embed-mode #search-container,
+    .embed-mode #stats-display,
+    .embed-mode #credits-btn { display: none !important; }
+    #embed-open-btn {
+      display: none;
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      background: rgba(30,30,30,0.9);
+      color: #ccc;
+      border: 1px solid #444;
+      padding: 6px 14px;
+      border-radius: 6px;
+      font-family: system-ui, sans-serif;
+      font-size: 12px;
+      cursor: pointer;
+      z-index: 1000;
+      text-decoration: none;
+      transition: background 0.2s, color 0.2s;
+    }
+    #embed-open-btn:hover { background: rgba(60,60,60,0.95); color: #fff; }
+    .embed-mode #embed-open-btn { display: block; }
+  </style>
   </head>
   <body>
+    <a id="embed-open-btn" href="https://mint-philosophy.github.io/paper-map/" target="_blank" rel="noopener">Open full map &#8599;</a>
     <div id="loading">
       <img
         id="loading-image"
