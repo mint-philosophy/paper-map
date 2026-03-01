@@ -1,17 +1,17 @@
 {
-  "total_papers": 1891,
+  "total_papers": 1996,
   "macro_categories": {
     "LLM Capabilities & Reasoning": 226,
     "LLM Agents & Autonomy": 193,
+    "Social Media & Misinformation": 189,
     "AI Safety & Alignment": 154,
     "AI Governance & Policy": 120,
     "AI Moral Status & Consciousness": 119,
     "Generative AI Foundations": 107,
     "Moral Reasoning & Ethics": 104,
     "LLM Psychology & Behavior": 93,
-    "Social Media & Misinformation": 84,
     "Democracy & Politics": 83,
-    "Interpretability & Mechanistic": 79,
+    "Mechanistic Interpretability": 79,
     "Scientific & Research Applications": 77,
     "Economic & Labor Impact": 75,
     "Deception & Honesty": 68,
@@ -21,7 +21,7 @@
     "Human-AI Interaction": 52,
     "Evaluation & Benchmarks": 40,
     "Bias & Fairness": 30,
-    "Values & Human Values": 14
+    "Human Values": 14
   },
   "year_range": [
     0,

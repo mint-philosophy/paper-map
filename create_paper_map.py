@@ -22,16 +22,13 @@ def load_data():
     coords = np.load(DATA_PATH / "umap_coords.npy")
     doc_ids = np.load(DATA_PATH / "document_ids.npy", allow_pickle=True)
 
-    # Create coords dataframe with document IDs
     coords_df = pd.DataFrame({
         'document_id': doc_ids,
         'umap_x': coords[:, 0],
         'umap_y': coords[:, 1]
     })
 
-    # Merge to align data
     df = coords_df.merge(df, on='document_id', how='left')
-
     return df, coords
 
 
@@ -39,10 +36,7 @@ def prepare_labels(df):
     """Prepare hierarchical label arrays."""
     macro_labels = df['macro_category'].fillna('Uncategorized').values
     cluster_labels = df['cluster_label'].fillna('Uncategorized').values
-    title_labels = df['title'].apply(
-        lambda x: x[:50] + '...' if len(str(x)) > 50 else str(x)
-    ).values
-    return macro_labels, cluster_labels, title_labels
+    return macro_labels, cluster_labels
 
 
 def prepare_hover_text(df):
@@ -76,19 +70,13 @@ def prepare_extra_data(df):
     return extra
 
 
-def compute_marker_sizes(df, size=5):
-    """Return uniform marker sizes."""
-    return np.full(len(df), size)
-
-
 def build_category_index(df):
     """Build per-category point index lists for JS filtering."""
     categories = df['macro_category'].fillna('Uncategorized')
     cat_counts = categories.value_counts()
     cat_index = {}
     for cat in cat_counts.index:
-        indices = df.index[categories == cat].tolist()
-        cat_index[cat] = indices
+        cat_index[cat] = df.index[categories == cat].tolist()
     return cat_index, cat_counts.to_dict()
 
 
@@ -103,10 +91,10 @@ def create_visualization(df, coords):
     """Create the interactive visualization."""
     print("Preparing visualization data...")
 
-    macro_labels, cluster_labels, title_labels = prepare_labels(df)
+    macro_labels, cluster_labels = prepare_labels(df)
     hover_text = prepare_hover_text(df)
     extra_data = prepare_extra_data(df)
-    marker_sizes = compute_marker_sizes(df)
+    marker_sizes = np.full(len(df), 5)
 
     # Build filter data
     cat_index, cat_counts = build_category_index(df)
@@ -159,12 +147,11 @@ def create_visualization(df, coords):
         count = cat_counts[cat]
         color = category_color(i, len(categories_ordered))
         chips_html += (
-            f'<button class="filter-chip active" data-category="{cat}" '
+            f'<button class="filter-chip cat-chip active" data-category="{cat}" '
             f'style="--chip-color:{color}">'
             f'{cat} <span class="chip-count">{count}</span></button>\n'
         )
 
-    # Discipline chips
     disc_chips_html = ""
     disc_colors = ["#7eb5d6", "#d6a87e", "#9ed67e", "#d67eb5", "#d6d67e",
                     "#7ed6c4", "#b57ed6", "#d67e7e", "#7e8bd6", "#c4d67e",
@@ -232,6 +219,34 @@ def create_visualization(df, coords):
         background: rgba(255,255,255,0.15);
         color: #fff;
     }
+    /* 3-way toggle */
+    #mode-toggle {
+        display: flex;
+        background: rgba(255,255,255,0.06);
+        border-radius: 6px;
+        padding: 2px;
+        margin-bottom: 8px;
+    }
+    .mode-btn {
+        flex: 1;
+        background: none;
+        border: none;
+        color: #666;
+        font-size: 10px;
+        padding: 5px 4px;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: all 0.15s;
+        text-align: center;
+        white-space: nowrap;
+    }
+    .mode-btn.active {
+        background: rgba(255,255,255,0.12);
+        color: #fff;
+    }
+    .mode-btn:hover:not(.active) {
+        color: #aaa;
+    }
     .filter-section-label {
         color: #666;
         font-size: 10px;
@@ -239,7 +254,17 @@ def create_visualization(df, coords):
         letter-spacing: 0.5px;
         margin: 8px 0 4px 0;
     }
-    #category-chips {
+    #category-section, #discipline-section {
+        transition: max-height 0.2s ease, opacity 0.2s ease;
+        overflow: hidden;
+    }
+    #category-section.hidden, #discipline-section.hidden {
+        max-height: 0;
+        opacity: 0;
+        margin: 0;
+        padding: 0;
+    }
+    #category-chips, #discipline-chips {
         display: flex;
         flex-wrap: wrap;
         gap: 4px;
@@ -377,13 +402,22 @@ def create_visualization(df, coords):
                 <button class="filter-header-btn" id="btn-close-filters">Close</button>
             </div>
         </div>
-        <div class="filter-section-label">Research Areas</div>
-        <div id="category-chips">
-            {chips_html}
+        <div id="mode-toggle">
+            <button class="mode-btn" data-mode="areas">Research Areas</button>
+            <button class="mode-btn active" data-mode="both">Both</button>
+            <button class="mode-btn" data-mode="disciplines">Disciplines</button>
         </div>
-        <div class="filter-section-label" style="margin-top:10px;">Discipline</div>
-        <div id="discipline-chips">
-            {disc_chips_html}
+        <div id="category-section">
+            <div class="filter-section-label">Research Areas</div>
+            <div id="category-chips">
+                {chips_html}
+            </div>
+        </div>
+        <div id="discipline-section">
+            <div class="filter-section-label">Disciplines</div>
+            <div id="discipline-chips">
+                {disc_chips_html}
+            </div>
         </div>
         <div class="filter-section-label" style="margin-top:10px;">Year Range</div>
         <div id="year-range">
@@ -401,7 +435,7 @@ def create_visualization(df, coords):
     </a>
     """
 
-    # Custom JS for filters and click handler
+    # Custom JS
     custom_js = f"""
     const CAT_INDEX = {cat_index_json};
     const DISC_INDEX = {disc_index_json};
@@ -411,14 +445,19 @@ def create_visualization(df, coords):
     // State
     const activeCategories = new Set(Object.keys(CAT_INDEX));
     const activeDisciplines = new Set(Object.keys(DISC_INDEX));
+    const ALL_CAT_COUNT = Object.keys(CAT_INDEX).length;
     const ALL_DISC_COUNT = Object.keys(DISC_INDEX).length;
     let yearMin = {min_year};
     let yearMax = {max_year};
     let filtersApplied = false;
+    let currentMode = 'both'; // 'areas', 'both', 'disciplines'
 
     function applyFilters() {{
-        const allCatsActive = activeCategories.size === Object.keys(CAT_INDEX).length;
-        const allDiscsActive = activeDisciplines.size === ALL_DISC_COUNT;
+        const useCats = currentMode === 'areas' || currentMode === 'both';
+        const useDiscs = currentMode === 'disciplines' || currentMode === 'both';
+
+        const allCatsActive = !useCats || activeCategories.size === ALL_CAT_COUNT;
+        const allDiscsActive = !useDiscs || activeDisciplines.size === ALL_DISC_COUNT;
         const fullYearRange = yearMin <= {min_year} && yearMax >= {max_year};
 
         if (allCatsActive && allDiscsActive && fullYearRange) {{
@@ -431,7 +470,7 @@ def create_visualization(df, coords):
             return;
         }}
 
-        // Build set of year-valid indices
+        // Year filter
         let yearValid = new Set();
         for (let y = yearMin; y <= yearMax; y++) {{
             const indices = YEAR_INDEX[String(y)];
@@ -441,11 +480,19 @@ def create_visualization(df, coords):
             YEAR_INDEX["0"].forEach(i => yearValid.add(i));
         }}
 
-        // Build set of discipline-valid indices
-        let discValid;
-        if (allDiscsActive) {{
-            discValid = null; // all valid
-        }} else {{
+        // Category filter
+        let catValid = null;
+        if (useCats && activeCategories.size < ALL_CAT_COUNT) {{
+            catValid = new Set();
+            for (const cat of activeCategories) {{
+                const indices = CAT_INDEX[cat];
+                if (indices) indices.forEach(i => catValid.add(i));
+            }}
+        }}
+
+        // Discipline filter
+        let discValid = null;
+        if (useDiscs && activeDisciplines.size < ALL_DISC_COUNT) {{
             discValid = new Set();
             for (const disc of activeDisciplines) {{
                 const indices = DISC_INDEX[disc];
@@ -453,17 +500,13 @@ def create_visualization(df, coords):
             }}
         }}
 
-        // Intersect: category AND year AND discipline
+        // Intersect all active filters
         const matchingIndices = [];
-        for (const cat of activeCategories) {{
-            const indices = CAT_INDEX[cat];
-            if (indices) {{
-                for (const i of indices) {{
-                    if (!yearValid.has(i)) continue;
-                    if (discValid !== null && !discValid.has(i)) continue;
-                    matchingIndices.push(i);
-                }}
-            }}
+        for (let i = 0; i < TOTAL_PAPERS; i++) {{
+            if (!yearValid.has(i)) continue;
+            if (catValid !== null && !catValid.has(i)) continue;
+            if (discValid !== null && !discValid.has(i)) continue;
+            matchingIndices.push(i);
         }}
 
         datamap.addSelection(matchingIndices, 'category-filter');
@@ -473,18 +516,41 @@ def create_visualization(df, coords):
             matchingIndices.length.toLocaleString() + ' / ' + TOTAL_PAPERS.toLocaleString() + ' papers';
     }}
 
-    // Wait for metadata to load before wiring up filters
+    function setMode(mode) {{
+        currentMode = mode;
+        const catSection = document.getElementById('category-section');
+        const discSection = document.getElementById('discipline-section');
+
+        // Update toggle buttons
+        document.querySelectorAll('.mode-btn').forEach(btn => {{
+            btn.classList.toggle('active', btn.dataset.mode === mode);
+        }});
+
+        // Show/hide sections
+        if (mode === 'areas') {{
+            catSection.classList.remove('hidden');
+            discSection.classList.add('hidden');
+        }} else if (mode === 'disciplines') {{
+            catSection.classList.add('hidden');
+            discSection.classList.remove('hidden');
+        }} else {{
+            catSection.classList.remove('hidden');
+            discSection.classList.remove('hidden');
+        }}
+
+        applyFilters();
+    }}
+
     function initFilters() {{
         // Category chips
-        document.querySelectorAll('.filter-chip').forEach(chip => {{
+        document.querySelectorAll('.cat-chip').forEach(chip => {{
             chip.addEventListener('click', () => {{
                 const cat = chip.dataset.category;
+                chip.classList.toggle('active');
                 if (chip.classList.contains('active')) {{
-                    chip.classList.remove('active');
-                    activeCategories.delete(cat);
-                }} else {{
-                    chip.classList.add('active');
                     activeCategories.add(cat);
+                }} else {{
+                    activeCategories.delete(cat);
                 }}
                 applyFilters();
             }});
@@ -494,50 +560,64 @@ def create_visualization(df, coords):
         document.querySelectorAll('.disc-chip').forEach(chip => {{
             chip.addEventListener('click', () => {{
                 const disc = chip.dataset.discipline;
+                chip.classList.toggle('active');
                 if (chip.classList.contains('active')) {{
-                    chip.classList.remove('active');
-                    activeDisciplines.delete(disc);
-                }} else {{
-                    chip.classList.add('active');
                     activeDisciplines.add(disc);
+                }} else {{
+                    activeDisciplines.delete(disc);
                 }}
                 applyFilters();
             }});
         }});
 
-        // All / None buttons (apply to both category and discipline chips)
+        // Mode toggle
+        document.querySelectorAll('.mode-btn').forEach(btn => {{
+            btn.addEventListener('click', () => setMode(btn.dataset.mode));
+        }});
+
+        // All / None — applies to visible sections only
         document.getElementById('btn-all').addEventListener('click', () => {{
-            document.querySelectorAll('#category-chips .filter-chip').forEach(c => {{
-                c.classList.add('active');
-                activeCategories.add(c.dataset.category);
-            }});
-            document.querySelectorAll('#discipline-chips .filter-chip').forEach(c => {{
-                c.classList.add('active');
-                activeDisciplines.add(c.dataset.discipline);
-            }});
+            const catVisible = !document.getElementById('category-section').classList.contains('hidden');
+            const discVisible = !document.getElementById('discipline-section').classList.contains('hidden');
+            if (catVisible) {{
+                document.querySelectorAll('.cat-chip').forEach(c => {{
+                    c.classList.add('active');
+                    activeCategories.add(c.dataset.category);
+                }});
+            }}
+            if (discVisible) {{
+                document.querySelectorAll('.disc-chip').forEach(c => {{
+                    c.classList.add('active');
+                    activeDisciplines.add(c.dataset.discipline);
+                }});
+            }}
             applyFilters();
         }});
         document.getElementById('btn-none').addEventListener('click', () => {{
-            document.querySelectorAll('#category-chips .filter-chip').forEach(c => {{
-                c.classList.remove('active');
-                activeCategories.delete(c.dataset.category);
-            }});
-            document.querySelectorAll('#discipline-chips .filter-chip').forEach(c => {{
-                c.classList.remove('active');
-                activeDisciplines.delete(c.dataset.discipline);
-            }});
+            const catVisible = !document.getElementById('category-section').classList.contains('hidden');
+            const discVisible = !document.getElementById('discipline-section').classList.contains('hidden');
+            if (catVisible) {{
+                document.querySelectorAll('.cat-chip').forEach(c => {{
+                    c.classList.remove('active');
+                    activeCategories.delete(c.dataset.category);
+                }});
+            }}
+            if (discVisible) {{
+                document.querySelectorAll('.disc-chip').forEach(c => {{
+                    c.classList.remove('active');
+                    activeDisciplines.delete(c.dataset.discipline);
+                }});
+            }}
             applyFilters();
         }});
 
         // Year range
-        const yearMinInput = document.getElementById('year-min');
-        const yearMaxInput = document.getElementById('year-max');
-        yearMinInput.addEventListener('change', () => {{
-            yearMin = parseInt(yearMinInput.value) || {min_year};
+        document.getElementById('year-min').addEventListener('change', function() {{
+            yearMin = parseInt(this.value) || {min_year};
             applyFilters();
         }});
-        yearMaxInput.addEventListener('change', () => {{
-            yearMax = parseInt(yearMaxInput.value) || {max_year};
+        document.getElementById('year-max').addEventListener('change', function() {{
+            yearMax = parseInt(this.value) || {max_year};
             applyFilters();
         }});
 
@@ -554,10 +634,9 @@ def create_visualization(df, coords):
         }});
     }}
 
-    // Initialize after data loads
     setTimeout(initFilters, 2000);
 
-    // Fix click handler - override after datamap initializes
+    // Fix click handler
     setTimeout(() => {{
         if (typeof datamap !== 'undefined' && datamap.deckgl) {{
             datamap.deckgl.setProps({{
@@ -574,7 +653,6 @@ def create_visualization(df, coords):
 
     print("Creating interactive plot...")
 
-    # Create the visualization
     plot = datamapplot.create_interactive_plot(
         coords,
         macro_labels,
@@ -615,13 +693,11 @@ def main():
 
     plot = create_visualization(df, coords)
 
-    # Save
     OUTPUT_PATH.mkdir(parents=True, exist_ok=True)
     output_file = OUTPUT_PATH / "mint_paper_map.html"
     plot.save(str(output_file))
     print(f"\nSaved visualization to {output_file}")
 
-    # Also save a data summary
     summary = {
         "total_papers": len(df),
         "macro_categories": df['macro_category'].value_counts().to_dict(),
