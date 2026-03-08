@@ -1,4 +1,18 @@
 
+## 2026-03-03 | TerMinty-55f83964
+
+**Work**: Fixed b"" @font-face CSS bug (datamapplot writes Python bytes repr into HTML). Changed label fontWeight from 600 to 400 (normal). Guide page iframe now points at local mintresearch.org copy instead of this repo.
+**Decisions**: Font fix applied here for standalone deployment, but primary paper map is now served from mintresearch.org/public/paper-map/.
+**State**: Live at mint-philosophy.github.io/paper-map/. Guide page no longer loads from this URL.
+**Session**: `3403d776-fc03-404d-8d56-d77855f83964`
+
+## 2026-03-02 | TerMinty-97e1fac9
+
+**Work**: Recovered hung session c0ca2e6b via SpecStory API. Re-clustered full corpus (1891 to 1996 papers, 28 clusters) using fixed `recluster_corpus.py`. Eliminated "Other" category (21 micro-topics reassigned). Added discipline classification (15 buckets). Built interactive filter panel with 3-way toggle (Research Areas / Both / Disciplines). Backfilled 113 embeddings. Queued 139 papers for 41q/RAPTOR re-ingestion via corpus-ingest.
+**Decisions**: k=28 from silhouette sweep. "Other" remap via Opus classification. 3-way toggle with AND intersection for combined filters. Re-ingestion (pull from DB, re-ingest via daemon) rather than in-place backfill for 41q/RAPTOR.
+**State**: Live at mint-philosophy.github.io/paper-map/ with 1,996 papers. 139 papers queued for re-ingestion. 8 papers need PDFs manually sourced. Re-export needed after re-ingestion completes.
+**Session**: `715ac35b-3277-4c9c-a2d6-608197e1fac9`
+
 ## 2026-02-05 | TerMinty-5b5d
 
 **Work**: Built interactive paper map visualization of MINT corpus (1,352 papers) using datamapplot. Deployed to GitHub Pages at mint-philosophy.github.io/paper-map. Features: UMAP projection, hierarchical labels, search by title+author, click-to-Drive links.
